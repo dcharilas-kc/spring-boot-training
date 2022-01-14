@@ -12,29 +12,10 @@ For some exercises software installation is required (e.g. Kafka, DB).For those 
 [**Exercise 4: Persist users**](Exercise%204.md)   
 [**Exercise 5: User privileges**](Exercise%205.md)   
 [**Exercise 6: Scheduler**](Exercise%206.md)
+[**Exercise 7: Service-to-service communication**](Exercise%207.md)
+[**Exercise 8: Kafka notifications**](Exercise%208.md)
 
-**Exercise 7: Kafka notifications**
 
-7a. Add kafka libraries to the project and update configuration accordingly (both producer and consumer). Define different topics to write and read. The idea is that the service should a) inform others whenever a job is done b) receive command by others to perform actions.
-7b. Create new POJO for notification with id, action enum (ADD,DELETE) and status enum (COMPLETED,PENDING)
-7c. Upon successful completion of add/delete user operation, dispatch a proper message to Kafka (status COMPLETED). Dispatch should be asynchronous so as not to interfere with the operation execution.
-7d. Create Kafka consumer. Upon receipt of message with status PENDING, invoke add/delete operation.
-7f. Verify Unit Tests are not broken! Add Kafka mock if needed.
-
-**Exercise 9: Expose Web Service**
-
-9a. Read the following guide: https://spring.io/guides/gs/producing-web-service/. Create web service to expose operation getUserById, which will receive an id as input and return a user object.
-9b. Generate WSDL file
-9c. Input and output will be in xml format, as specified by the SOAP protocol.
-9d. Test the new web service by Postman or SoapUi, by making a SOAP request.
-
-**Exercise 10: Internal microservice communication**
-
-10a. Create a new microservice (we will call them A and B from now on)
-10b. In B, use the previously generated WSDL to generate stubs. You can do this during build time by using proper plugin in pom, e.g. maven-jaxb2-plugin
-10c. In B, invoke get user REST operation of A. You can use Feign client or invoke directly RestTemplate to achieve this. For example: https://spring.io/guides/gs/consuming-rest/
-10d. In B, invoke get user SOAP operation of A. For example: https://www.baeldung.com/spring-soap-web-service, https://spring.io/guides/gs/consuming-web-service/
-10e. Compare results for above operations. For the same id, retrieved used information should be identical
 
 **Exercise 11: Database migrations**
 
