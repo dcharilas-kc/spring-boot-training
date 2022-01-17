@@ -2,7 +2,7 @@
 
 | Step | Actions                                                                                                                                                                                              |
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| a    | Create new Spring Boot project named `caller-service`. You can use https://start.spring.io/ for a quick setup.                                                                                       |
+| a    | Create new Spring Boot project named `user-service`. You can use https://start.spring.io/ for a quick setup.                                                                                         |
 | b    | Verify that the project builds successfully (Maven/Gradle).                                                                                                                                          |
 | c    | Verify that project can be started/deployed successfully. Default port should be _8080_, unless specified otherwise.                                                                                 |
 | d    | Create `DemoController` class under package `controller`.                                                                                                                                            |
